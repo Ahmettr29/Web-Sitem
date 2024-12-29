@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background: url(kullan.jpg) center/cover fixed no-repeat;
+    transition: background 0.3s ease;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background: #3822ffe6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 2em;
+    color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 25px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    font-family: 'Times New Roman';
+    transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    background: #ff5722;
+    border-radius: 2px;
+}
+
+.section {
+    padding: 120px 40px;
+    margin-top: 100px;
+    background: rgba(76, 175, 80, 0.6) url('kullan.jpg') center/cover no-repeat;
+    height: 50vh;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.section.fade-in {
+    opacity: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#hakkimda {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#hakkimda p {
+    margin-bottom: 20px;
+}
+
+.hakkimda-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#projelerim {
+    padding: 60px 40px;
+    margin-top: 120px;
+    text-align: center;
+    background: transparent;
+}
+
+#projelerim h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.project {
+    background-color: #d3d3d3;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease;
+}
+
+.project:hover {
+    background-color: #b0b0b0;
+}
+
+.project h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 48%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.image-container img:first-child {
+    width: calc(55% + 200px);
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.image-container img:nth-child(2) {
+    width: 48%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.home-page .home-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid #ff5722;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+#iletisim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+}
+
+#iletisim.fade-in {
+    opacity: 1;
+}
+
+#iletisim h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#iletisim p {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e64a19;
+}
+
+#iletisim .social-media {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#iletisim .social-media li a {
+    color: #ff5722;
+    font-size: 2.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#iletisim .social-media li a:hover {
+    color: #e64a19;
+}
+
+#iletisim p.address {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#iletisim p a {
+    color: black;
+    text-decoration: none;
+}
+
+#iletisim p a:hover {
+    text-decoration: underline;
+}
+
+#hobilerim {
+    padding: 60px 40px;
+    margin-top: 120px;
+    text-align: center;
+    background: transparent;
+}
+
+#hobilerim h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.hobby {
+    background-color: #d3d3d3;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease;
+}
+
+.hobby:hover {
+    background-color: #b0b0b0;
+}
+
+.hobby h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hobby p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar ul li a {
+        padding: 8px 16px;
+        font-size: 20px;
+    }
+
+    #hobilerim h2 {
+        font-size: 2em;
+    }
+
+    .hobby h3 {
+        font-size: 1.6em;
+    }
+
+    .hobby p {
+        font-size: 1em;
+    }
+
+    #iletisim form label, #iletisim form button, #iletisim h1, #iletisim h2 {
+        font-size: 1.2em;
+    }
+
+    #iletisim .social-media li a {
+        font-size: 1.5em;
+    }
+
+    #iletisim .social-media {
+        flex-direction: column;
+    }
+}
